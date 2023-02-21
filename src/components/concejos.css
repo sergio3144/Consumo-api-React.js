@@ -1,0 +1,51 @@
+.title {
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 50px;
+}
+.container {
+  max-width: 500px;
+  background-color: #313a49;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.adivinanza {
+  color: #54fead;
+  margin: 20px 0 20px 0;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+.api-concejo {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.image-desktop {
+  margin-bottom: -20px;
+  width: 100%;
+}
+.btn-reset {
+  border-radius: 50%;
+  padding: 12px 12px 10px 12px;
+  border: none;
+  background-color: #54fead;
+  cursor: pointer;
+  position: relative;
+  top: 50px;
+  transition: .2s;
+}
+
+.btn-reset:hover {
+  box-shadow: 0px 0px 10px 0px white;
+  transition: .2s;
+}
+
+@media(max-width: 532px) {
+  .container {
+    margin: 100px 10px 0 10px;
+  }
+}

@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { Concejos } from './components/concejos';
 
 function App() {
+
+  const [apiText, setApiText] = React.useState('Dont judge a book by its cover, unless it has a synopsis on the back.')
+  const [numberApi, setNumberApi] = React.useState('117')
+
+    const api = async () => {
+      setApiText('Esperando concejo...');
+      await fetch('https://api.adviceslip.com/advice').then(res => res.json()).then(data => {
+        const { slip } = data;
+        setNumberApi(slip.id)
+        setApiText(slip.advice);
+      })
+    }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Concejos
+      concejosApi={api}
+      numberApi = {numberApi}
+      textConcejo = {apiText}
+      />
     </div>
   );
 }
