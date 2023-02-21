@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Concejos } from './components/concejos';
+import { Consejos } from './components/consejos';
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
   const [numberApi, setNumberApi] = React.useState('117')
 
     const api = async () => {
-      setApiText('Esperando concejo...');
+      setApiText('Esperando consejo...');
       await fetch('https://api.adviceslip.com/advice').then(res => res.json()).then(data => {
         const { slip } = data;
         setNumberApi(slip.id)
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <Concejos
+      <Consejos
       concejosApi={api}
       numberApi = {numberApi}
       textConcejo = {apiText}

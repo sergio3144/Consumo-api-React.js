@@ -7,9 +7,9 @@ import './concejos.css'
 function Concejos ({ concejosApi, numberApi, textConcejo }) {
   return (
     <>
-    <h1 className="title">Espera 5 segundos para traer tu otro concejo</h1>
+    <h1 className="title">Espera 5 segundos para traer tu otro consejo</h1>
     <div className="container">
-      <h1 className="adivinanza">CONCEJO <span className="number">#{numberApi}</span></h1>
+      <h1 className="adivinanza">CONSEJO <span className="number">#{numberApi}</span></h1>
       <p className="api-concejo">
         { textConcejo }
       </p>
@@ -28,4 +28,4 @@ function Concejos ({ concejosApi, numberApi, textConcejo }) {
   )
 }
 
-export { Concejos }
+export { Consejos }
